@@ -1,0 +1,79 @@
+<html>
+<body> 
+<select id="mySelect" onchange="myFunction()">
+    <option value="Galaxy S5" selected="selected">Galaxy S5</option>
+    <option value="Nexus 5X">Nexus 5X</option>
+    <option value="Nexus 6P">Nexus 6P</option>
+     <option value="iphone 6">iphone 6</option>
+    <option value="iphone 6plus">iphone 6plus</option>
+     <option value="ipad">ipad</option>
+      <option value="ipad pro">ipad pro</option>
+</select>
+<!--<p id="demo"></p>-->
+<center>
+<iframe id="themeframe" src="index.html" height="640px" width="360px">
+ 
+</iframe>
+</center>
+</body>
+</html>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("mySelect").value;
+    // document.getElementById("demo").innerHTML =  x;
+
+    if(x == "Galaxy S5"){
+        document.getElementById("themeframe").style.width = "360px";
+         document.getElementById("themeframe").style.height = "640px";
+    }
+      if(x == "Nexus 5X"){
+        document.getElementById("themeframe").style.width = "412px";
+         document.getElementById("themeframe").style.height = "732px";
+    }
+      if(x == "Nexus 6P"){
+        document.getElementById("themeframe").style.width = "412px";
+         document.getElementById("themeframe").style.height = "732px";
+    }
+    //   if(x == "iphone 5"){
+    //     document.getElementById("themeframe").style.width = "320px";
+    //      document.getElementById("themeframe").style.height = "568px";
+    // }
+      if(x == "iphone 6"){
+        document.getElementById("themeframe").style.width = "375px";
+         document.getElementById("themeframe").style.height = "667px";
+    }
+       if(x == "iphone 6plus"){
+        document.getElementById("themeframe").style.width = "414px";
+         document.getElementById("themeframe").style.height = "736px";
+    }
+          if(x == "ipad"){
+        document.getElementById("themeframe").style.width = "768px";
+         document.getElementById("themeframe").style.height = "1024px";
+    }
+          if(x == "ipad pro"){
+        document.getElementById("themeframe").style.width = "1024px";
+         document.getElementById("themeframe").style.height = "1366px";
+    }
+}
+
+function detectmob() { 
+ if( navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+ ){
+   window.location.href = "index.html";
+    return true;
+  }
+ else {
+    
+    return false;
+  }
+}
+
+detectmob();
+</script>
